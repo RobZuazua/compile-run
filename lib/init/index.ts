@@ -4,7 +4,7 @@ import path from 'path';
 // const home = os.homedir();
 
 const libDir = '.compile-run2';
-const tmpDir = 'tmp';
+const tmpDir = '/tmp';
 
 // export const libPath = path.join(home, libDir);
 export const libPath = "";
