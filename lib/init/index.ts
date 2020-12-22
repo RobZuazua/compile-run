@@ -30,9 +30,9 @@ function handleError(err: Error) {
  */
 export function checkExistsAndMakeDir(path: string) {
     try {
-        if (!fs.existsSync(path)) {
-            fs.mkdirSync(path);
-        }
+        // if (!fs.existsSync(path)) {
+        //     fs.mkdirSync(path);
+        // }
     }
     catch (err) {
         handleError(err);
