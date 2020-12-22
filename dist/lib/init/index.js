@@ -7,7 +7,7 @@ var fs_1 = __importDefault(require("fs"));
 var path_1 = __importDefault(require("path"));
 // const home = os.homedir();
 var libDir = '.compile-run2';
-var tmpDir = 'tmp';
+var tmpDir = '/tmp';
 // export const libPath = path.join(home, libDir);
 exports.libPath = "";
 //Make Lib dir in the os home directory
