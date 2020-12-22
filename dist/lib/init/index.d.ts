@@ -1,4 +1,4 @@
-export declare const libPath: string;
+export declare const libPath = "";
 export declare const tmpPath: string;
 /**
  * Checks if the dir exists at the provided path. If it doesn't exist simply makes a new Directory

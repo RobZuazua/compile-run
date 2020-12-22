@@ -3,15 +3,16 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var os_1 = __importDefault(require("os"));
+var fs_1 = __importDefault(require("fs"));
 var path_1 = __importDefault(require("path"));
-var home = os_1.default.homedir();
+// const home = os.homedir();
 var libDir = '.compile-run2';
 var tmpDir = 'tmp';
-exports.libPath = path_1.default.join(home, libDir);
+// export const libPath = path.join(home, libDir);
+exports.libPath = "";
 //Make Lib dir in the os home directory
-checkExistsAndMakeDir(exports.libPath);
-exports.tmpPath = path_1.default.join(home, libDir, tmpDir);
+// checkExistsAndMakeDir(libPath);
+exports.tmpPath = path_1.default.join(tmpDir);
 //Make the tmp dir to store source files
 checkExistsAndMakeDir(exports.tmpPath);
 /**
@@ -30,9 +31,9 @@ function handleError(err) {
  */
 function checkExistsAndMakeDir(path) {
     try {
-        // if (!fs.existsSync(path)) {
-        //     fs.mkdirSync(path);
-        // }
+        if (!fs_1.default.existsSync(path)) {
+            fs_1.default.mkdirSync(path);
+        }
     }
     catch (err) {
         handleError(err);

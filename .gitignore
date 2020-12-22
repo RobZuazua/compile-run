@@ -61,7 +61,7 @@ typings/
 .next
 
 #distributable directory, It can be build using npm run build. No need to commit
-dist
+#dist
 
 #vscode
 .vscode
