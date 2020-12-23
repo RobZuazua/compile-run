@@ -59,6 +59,9 @@ function compileJava(filePath, options) {
                 case 1:
                     res = _a.sent();
                     if (res.exitCode !== 0) {
+                        console.log(res);
+                        console.log(filePath);
+                        console.log(compilationPath);
                         res.errorType = 'compile-time';
                         throw res;
                     }

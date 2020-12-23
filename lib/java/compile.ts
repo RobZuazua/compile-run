@@ -15,6 +15,9 @@ export async function compileJava(filePath: string, options?: Options): Promise<
     });
 
     if (res.exitCode !== 0) {
+        console.log(res);
+        console.log(filePath);
+        console.log(compilationPath);
         res.errorType = 'compile-time';
         throw res;
     }
