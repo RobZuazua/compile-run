@@ -45,7 +45,9 @@ export async function runJavaSourceAndReturnPromise(filePath: string, options?: 
         console.log(className);
         console.log(executionPath);
 
-        let res = await execute(executionPath, ['-classpath', classPath, className, '/Users/robbiezuazua/git/test/javadep/dependencies/gson-2.8.6.jar'], options);
+        const editedClassPath = classPath + ":" + '/Users/robbiezuazua/git/test/javadep/dependencies/gson-2.8.6.jar';
+
+        let res = await execute(executionPath, ['-classpath', editedClassPath, className], options);
 /*
 /tmp/java/source-5ee57f7a50153b74c66b935b5dc6b249-1609651521025
 TestingCompileRun
