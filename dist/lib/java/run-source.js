@@ -70,7 +70,7 @@ function runJavaSourceAndReturnPromise(filePath, options) {
                     console.log(classPath);
                     console.log(className);
                     console.log(executionPath);
-                    editedClassPath = classPath + ":" + '/Users/robbiezuazua/git/test/javadep/dependencies/gson-2.8.6.jar';
+                    editedClassPath = classPath + ":" + '/opt/gson-2.8.6.jar';
                     return [4 /*yield*/, execute_command_1.execute(executionPath, ['-classpath', editedClassPath, className], options)];
                 case 2:
                     res = _a.sent();
