@@ -70,7 +70,7 @@ function runJavaSourceAndReturnPromise(filePath, options) {
                     finalPath = path_1.default.join(classPath, endFileName);
                     resolvedFinalPath = path_1.default.resolve(finalPath);
                     executionPath = options && options.executionPath || 'java';
-                    return [4 /*yield*/, execute_command_1.execute(executionPath, ['-cp', '/Users/robbiezuazua/git/test/javadep/dependencies/gson-2.8.6.jar', resolvedFinalPath], options)];
+                    return [4 /*yield*/, execute_command_1.execute(executionPath, ['-cp', '/opt/gson-2.8.6.jar', resolvedFinalPath], options)];
                 case 2:
                     res = _a.sent();
                     if (res.stderr) {
