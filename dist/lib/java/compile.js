@@ -53,7 +53,7 @@ function compileJava(filePath, options) {
                 case 0:
                     filePath = path_1.default.resolve(filePath);
                     compilationPath = options && options.compilationPath || 'javac';
-                    return [4 /*yield*/, execute_command_1.execute(compilationPath, [filePath], {
+                    return [4 /*yield*/, execute_command_1.execute(compilationPath, ['-cp', '/Users/robbiezuazua/git/test/javadep/dependencies/gson-2.8.6.jar', filePath], {
                             timeout: options && options.compileTimeout || 3000
                         })];
                 case 1:

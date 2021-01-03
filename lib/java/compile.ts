@@ -10,7 +10,7 @@ import path from 'path';
 export async function compileJava(filePath: string, options?: Options): Promise<string> {
     filePath = path.resolve(filePath);
     const compilationPath: string = options && options.compilationPath || 'javac';
-    let res = await execute(compilationPath, [filePath], {
+    let res = await execute(compilationPath, ['-cp', '/Users/robbiezuazua/git/test/javadep/dependencies/gson-2.8.6.jar', filePath], {
         timeout: options && options.compileTimeout || 3000
     });
 
