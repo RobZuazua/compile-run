@@ -70,9 +70,14 @@ function runJavaSourceAndReturnPromise(filePath, options) {
                     console.log(classPath);
                     console.log(className);
                     console.log(executionPath);
-                    return [4 /*yield*/, execute_command_1.execute(executionPath, ['-classpath', classPath, className], options)];
+                    return [4 /*yield*/, execute_command_1.execute(executionPath, ['-classpath', classPath, className, '/Users/robbiezuazua/git/test/javadep/dependencies/gson-2.8.6.jar'], options)];
                 case 2:
                     res = _a.sent();
+                    /*
+                    /tmp/java/source-5ee57f7a50153b74c66b935b5dc6b249-1609651521025
+                    TestingCompileRun
+                    java
+                    */
                     //let res = await execute(executionPath, ['-cp', '/Users/robbiezuazua/git/test/javadep/dependencies/gson-2.8.6.jar', resolvedFinalPath], options);
                     // let res = await execute(executionPath, ['-cp', '/opt/gson-2.8.6.jar', resolvedFinalPath], options);
                     if (res.stderr) {
