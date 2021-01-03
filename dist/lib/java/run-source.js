@@ -56,7 +56,7 @@ function runJavaSource(source) {
 exports.runJavaSource = runJavaSource;
 function runJavaSourceAndReturnPromise(filePath, options) {
     return __awaiter(this, void 0, void 0, function () {
-        var classFilePath, classPath, className, endFileName, finalPath, resolvedFinalPath, executionPath, res, err_1;
+        var classFilePath, classPath, className, executionPath, res, err_1;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
@@ -66,13 +66,14 @@ function runJavaSourceAndReturnPromise(filePath, options) {
                     classFilePath = _a.sent();
                     classPath = path_1.default.dirname(classFilePath);
                     className = path_1.default.basename(classFilePath).split('.')[0];
-                    endFileName = className + ".java";
-                    finalPath = path_1.default.join(classPath, endFileName);
-                    resolvedFinalPath = path_1.default.resolve(finalPath);
                     executionPath = options && options.executionPath || 'java';
-                    return [4 /*yield*/, execute_command_1.execute(executionPath, ['-cp', '/Users/robbiezuazua/git/test/javadep/dependencies/gson-2.8.6.jar', resolvedFinalPath], options)];
+                    console.log(classPath);
+                    console.log(className);
+                    console.log(executionPath);
+                    return [4 /*yield*/, execute_command_1.execute(executionPath, ['-classpath', classPath, className], options)];
                 case 2:
                     res = _a.sent();
+                    //let res = await execute(executionPath, ['-cp', '/Users/robbiezuazua/git/test/javadep/dependencies/gson-2.8.6.jar', resolvedFinalPath], options);
                     // let res = await execute(executionPath, ['-cp', '/opt/gson-2.8.6.jar', resolvedFinalPath], options);
                     if (res.stderr) {
                         res.errorType = 'run-time';
