@@ -40,8 +40,8 @@ export async function runJavaSourceAndReturnPromise(filePath: string, options?: 
         const finalPath = path.join(classPath, className);
         const resolvedFinalPath = path.resolve(finalPath);
         const executionPath = options && options.executionPath || 'java';
-        // let res = await execute(executionPath, ['-cp', '/Users/robbiezuazua/git/test/javadep/dependencies/gson-2.8.6.jar', resolvedFinalPath], options);
-        let res = await execute(executionPath, ['-cp', '/opt/gson-2.8.6.jar', resolvedFinalPath], options);
+        let res = await execute(executionPath, ['-cp', '/Users/robbiezuazua/git/test/javadep/dependencies/gson-2.8.6.jar', resolvedFinalPath], options);
+        // let res = await execute(executionPath, ['-cp', '/opt/gson-2.8.6.jar', resolvedFinalPath], options);
         if (res.stderr) {
             res.errorType = 'run-time';
         }
